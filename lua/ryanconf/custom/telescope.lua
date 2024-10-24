@@ -4,4 +4,16 @@ vim.keymap.set("n", "<leader>sg", builtin.live_grep, {})
 vim.keymap.set("n", "<leader><leader>", builtin.buffers, {})
 vim.keymap.set("n", "<C-p>", builtin.git_files, {})
 
-require("telescope").setup({ defaults = { file_ignore_patterns = { "CMake" } } })
+require("telescope").setup({
+	defaults = {
+		ripgrep_arguments = {
+			"rg",
+			"--hidden",
+			"--no-heading",
+			"--with-filename",
+			"--line-number",
+			"--column",
+		},
+		file_ignore_patterns = { "deps/", "libs/" },
+	},
+})

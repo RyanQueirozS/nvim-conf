@@ -1,9 +1,11 @@
 return {
     -- Theming nvim
+    { "xiyaowong/transparent.nvim" },
+    { 'norcalli/nvim-colorizer.lua' },
     {
-        "dasupradyumna/midnight.nvim",
-        lazy = false,
+        "blazkowolf/gruber-darker.nvim",
         priority = 1000,
+        lazy = false,
         config = function()
             require("ryanconf.custom.colors")
         end,

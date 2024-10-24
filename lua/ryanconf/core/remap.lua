@@ -47,5 +47,10 @@ end, opts)
 --UndoTree
 vim.keymap.set("n", "<leader>ud", "<cmd> UndotreeToggle <CR>")
 
+-- Floatterm
+vim.keymap.set("n", "<leader>t", "<cmd> FloatermNew<CR>")
+
 -- mistakes
 vim.cmd([[command! -nargs=0 W :write]])
+vim.cmd([[command! -nargs=0 Wq :write | :quit]])
+vim.cmd([[command! -nargs=0 Wqa :write | :quitall]])
