@@ -4,6 +4,7 @@ require("conform").setup({
 		javascript = { "prettier" },
 		typescript = { "prettier" },
 		c = { "clang-format" },
+		cpp = { "clang-format" },
 	},
 })
 

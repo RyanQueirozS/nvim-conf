@@ -69,3 +69,7 @@ vim.api.nvim_create_user_command("BR", function()
 	vim.cmd([[Build]])
 	vim.cmd([[Run]])
 end, {})
+
+vim.api.nvim_create_user_command("RemoveRLN", function()
+	vim.cmd([[set norelativenumber]])
+end, {})
